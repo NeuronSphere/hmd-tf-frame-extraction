@@ -1,0 +1,38 @@
+{
+  "identifier": "hmd-tf-frame-extraction",
+  "name": "repo_name",
+  "description": "NeuronSphere Notebook Transform to extract frames from a video",
+  "project_type": {
+    "name": "Notebook Transform",
+    "facets": [
+      "default_repo",
+      "notebooks_repo",
+      "transform_repo"
+    ]
+  },
+  "build": {
+    "commands": [
+      [
+        "python"
+      ],
+      [
+        "docker"
+      ]
+    ]
+  },
+  "docker": {
+    "build": {
+      "context_dir": "./",
+      "install_local": true
+    }
+  },
+  "deploy": {
+    "commands": [
+      [
+        "docker"
+      ]
+    ],
+    "dependencies": {},
+    "default_configuration": {}
+  }
+}

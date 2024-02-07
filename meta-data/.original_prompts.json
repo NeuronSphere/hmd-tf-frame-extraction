@@ -1,0 +1,13 @@
+{
+  "_org": "hmd",
+  "_repo_type": "tf-",
+  "short_name": "frame-extraction",
+  "project_name": "hmd-tf-frame-extraction",
+  "repo_name": "hmd-tf-frame-extraction",
+  "description": "NeuronSphere Notebook Transform to extract frames from a video",
+  "_author": "Alex Burgoon",
+  "_author_email": "alex.burgoon@hmdlabs.io",
+  "module_name": "hmd_tf_frame_extraction",
+  "_template": "/tmp/tmpbtcjk2df/hmd_cli_repo",
+  "_output_dir": "/home/aburg/hmd-public-examples/projects"
+}
