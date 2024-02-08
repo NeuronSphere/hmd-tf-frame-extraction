@@ -4,21 +4,10 @@
   "description": "NeuronSphere Notebook Transform to extract frames from a video",
   "project_type": {
     "name": "Notebook Transform",
-    "facets": [
-      "default_repo",
-      "notebooks_repo",
-      "transform_repo"
-    ]
+    "facets": ["default_repo", "notebooks_repo", "transform_repo"]
   },
   "build": {
-    "commands": [
-      [
-        "python"
-      ],
-      [
-        "docker"
-      ]
-    ]
+    "commands": [["docker"]]
   },
   "docker": {
     "build": {
@@ -27,11 +16,7 @@
     }
   },
   "deploy": {
-    "commands": [
-      [
-        "docker"
-      ]
-    ],
+    "commands": [["docker"]],
     "dependencies": {},
     "default_configuration": {}
   }

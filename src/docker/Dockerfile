@@ -1,13 +1,20 @@
 # syntax = docker/dockerfile:1.0-experimental
 
-FROM python:3.9
-COPY ./src/docker/requirements.txt ${FUNCTION_DIR}
+FROM ghcr.io/neuronsphere/hmd-img-jupyter-multiarch:stable
 
-RUN --mount=type=secret,id=pipconfig,dst=/etc/pip.conf \
+RUN --mount=type=secret,id=pipconfig,uid=1000,dst=/home/jovyan/.pip/pip.conf \
+    pip install papermill==2.4.0 nbformat
+
+COPY meta-data/ /meta-data
+COPY src/ /src
+COPY src/docker/requirements.txt ${FUNCTION_DIR}
+RUN --mount=type=secret,id=pipconfig,uid=1000,dst=/home/jovyan/.pip/pip.conf \
     pip install -r requirements.txt
 
-ENV TRANSFORM_INSTANCE_CONTEXT default
-ENV TRANSFORM_NID default
+WORKDIR /app
 
-COPY entrypoint.py ${FUNCTION_DIR}
+COPY src/docker/entrypoint.py entrypoint.py
+COPY src/notebooks/ /app/notebooks/
+
+
 ENTRYPOINT [ "python", "entrypoint.py" ]

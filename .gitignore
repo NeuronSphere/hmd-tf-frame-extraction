@@ -136,3 +136,12 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+test/videos/
+test/images/
+!test/videos/.gitkeep
+**/.ipynb_checkpoints/
+bender/docker-compose.yaml
+bender/log.html
+bender/output.xml
+bender/report.html

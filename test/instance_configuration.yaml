@@ -1,0 +1,4 @@
+deployment_id: aaa
+instance_name: hmd_tf_frame_extraction
+repo_name: hmd-tf-frame-extraction
+version: '0.1'

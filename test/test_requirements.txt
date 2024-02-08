@@ -1,5 +1,3 @@
-hmd-cli-app
+hmd-lib-robot-shared
 hmd-cli-tools
-hmd-cli-artifact
-hmd-cli-docker
 robotframework

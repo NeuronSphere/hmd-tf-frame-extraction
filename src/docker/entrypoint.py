@@ -4,7 +4,10 @@ import os
 import json
 from pathlib import Path
 
-from hmd_tf_frame_extraction.hmd_tf_frame_extraction import do_transform
+import nbformat
+import datetime
+import papermill as pm
+
 
 logging.basicConfig(
     stream=sys.stdout,
@@ -14,7 +17,6 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-
 
 
 def entry_point():
@@ -28,7 +30,17 @@ def entry_point():
     )
     transform_nid = os.environ.get("TRANSFORM_NID")
 
-    do_transform(input_content_path, output_content_path, transform_nid, transform_instance_context)
+    notebook = transform_instance_context["notebook"]
+    params = transform_instance_context["params"]
+
+    # add input and output paths to params
+    params["transform_input_path"] = str(input_content_path)
+    params["transform_output_path"] = str(output_content_path)
+
+    input_path = Path("/app/notebooks") / notebook
+    output_path = output_content_path / notebook
+    pm.execute_notebook(input_path, output_path, parameters=params)
+
     logger.info("Transform complete.")
 
 
