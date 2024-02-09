@@ -11,10 +11,11 @@ COPY src/docker/requirements.txt ${FUNCTION_DIR}
 RUN --mount=type=secret,id=pipconfig,uid=1000,dst=/home/jovyan/.pip/pip.conf \
     pip install -r requirements.txt
 
-WORKDIR /app
+WORKDIR /app/notebooks/
 
 COPY src/docker/entrypoint.py entrypoint.py
 COPY src/notebooks/ /app/notebooks/
+COPY src/config/ /app/config/
 
 
 ENTRYPOINT [ "python", "entrypoint.py" ]

@@ -145,3 +145,12 @@ bender/docker-compose.yaml
 bender/log.html
 bender/output.xml
 bender/report.html
+test/images-out/
+test/video-out/
+src/config/yolov3.weights
+src/config/yolov3.cfg
+test/__pycache__/
+test/__pycache__/tx_vars.cpython-39.pyc
+test/create_video.ipynb
+test/frame_extraction.ipynb
+test/object_detection.ipynb
