@@ -1,4 +1,5 @@
-# hmd-tf-frame-extraction
+hmd-tf-frame-extraction
+==========================
 
 NeuronSphere Notebook Transform to extract frames from a video, and performs operations on them.
 It demonstrates the standard pattern for operationalizing Jupyter Notebooks into a NeuronSphere Transform.
@@ -37,7 +38,7 @@ It will continue write images with bounding boxes until it detects 10 frames wit
 Create Video
 +++++++++++++++++++++++++++++++++++++++
 
-The notebook ``create_video.ipynb`` will join all images in ``/hmd_transform/output/images-out/<Video Name>`` into one new video, ``<Video Name>.avi
+The notebook ``create_video.ipynb`` will join all images in ``/hmd_transform/output/images-out/<Video Name>`` into one new video, ``<Video Name>.avi``
 
 Building & Testing
 --------------------------------------
