@@ -156,3 +156,4 @@ test/frame_extraction.ipynb
 test/object_detection.ipynb
 test/frame_extraction.ipynb
 test/__pycache__/tx_vars.cpython-39.pyc
+target/bartleby/
