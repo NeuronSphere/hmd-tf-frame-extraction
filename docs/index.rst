@@ -7,6 +7,7 @@ Welcome to HMD hmd-tf-frame-extraction's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   readme.rst
    transforms.rst
 
 Indices and tables
